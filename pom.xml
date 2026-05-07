@@ -37,6 +37,12 @@
       <artifactId>jackson-databind</artifactId>
       <optional>true</optional>
     </dependency>
+    <!-- slf4j-api is optional: consuming app supplies the implementation -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <optional>true</optional>
+    </dependency>
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
