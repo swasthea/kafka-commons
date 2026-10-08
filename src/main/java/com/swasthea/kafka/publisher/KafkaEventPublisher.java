@@ -1,5 +1,6 @@
 package com.swasthea.kafka.publisher;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.swasthea.kafka.event.DomainEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,6 +19,7 @@ public class KafkaEventPublisher {
 
     private static final Logger log = LoggerFactory.getLogger(KafkaEventPublisher.class);
 
+    private final ObjectMapper objectMapper = new ObjectMapper().findAndRegisterModules();
     private final KafkaTemplate<String, Object> kafkaTemplate;
     private final String topic;
 
@@ -40,6 +42,24 @@ public class KafkaEventPublisher {
         } catch (Exception ex) {
             log.error("[Kafka] Failed to publish {} eventId={}: {}",
                     event.getEventType(), event.getEventId(), ex.getMessage(), ex);
+        }
+    }
+
+    /**
+     * Publishes an arbitrary payload to the given topic. Strings are sent as-is;
+     * any other object is serialized to a JSON string first.
+     *
+     * @param topic   the destination topic
+     * @param payload the payload to publish
+     */
+    public void publish(String topic, Object payload) {
+        try {
+            String message = payload instanceof String s ? s : objectMapper.writeValueAsString(payload);
+            kafkaTemplate.send(topic, message);
+            log.info("[Kafka] Published payload type={} topic={}",
+                    payload == null ? "null" : payload.getClass().getSimpleName(), topic);
+        } catch (Exception ex) {
+            log.error("[Kafka] Failed to publish payload to topic={}: {}", topic, ex.getMessage(), ex);
         }
     }
 }
