@@ -12,5 +12,8 @@ public final class EventType {
     public static final String ENCOUNTER_CREATED        = "ENCOUNTER_CREATED";
     public static final String ENCOUNTER_STATUS_CHANGED = "ENCOUNTER_STATUS_CHANGED";
 
+    // ── Billing events ─────────────────────────────────────────────────────
+    public static final String BILLING_CHARGE_CREATED   = "BILLING_CHARGE_CREATED";
+
     private EventType() { /* constants-only class */ }
 }
