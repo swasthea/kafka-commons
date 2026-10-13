@@ -49,6 +49,9 @@ public class BillingChargeEvent {
     private String practitionerId;
     private String practitionerName;
 
+    private String payerId;
+    private String payerType;
+
     /** CONSULTATION, PROCEDURE, PHARMACY, LAB. */
     private String activityType;
 
