@@ -68,6 +68,11 @@ public class BillingChargeEvent {
     @Builder.Default
     private String currency = "INR";
 
+    /** Package identifiers and coverage flag. */
+    private String packageId;
+    private String packageName;
+    private Boolean isPackageCovered;
+
     private Map<String, Object> metadata;
 
     public String toJson() {
