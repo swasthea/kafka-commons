@@ -15,5 +15,9 @@ public final class EventType {
     // ── Billing events ─────────────────────────────────────────────────────
     public static final String BILLING_CHARGE_CREATED   = "BILLING_CHARGE_CREATED";
 
+    // ── Procedure & Clinical events ─────────────────────────────────────────
+    public static final String PROCEDURE_ORDERED         = "PROCEDURE_ORDERED";
+    public static final String PROCEDURE_ORDER_CANCELLED = "PROCEDURE_ORDER_CANCELLED";
+
     private EventType() { /* constants-only class */ }
 }
