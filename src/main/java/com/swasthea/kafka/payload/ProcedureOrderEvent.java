@@ -48,6 +48,8 @@ public class ProcedureOrderEvent {
 
     private String procedureOrderId;
     private String encounterId;
+    private String parentEncounterId; // New field
+    private String episodeOfCareId; // New field
     private String patientId;
     private String patientName;
     private String orderingClinicianId;
