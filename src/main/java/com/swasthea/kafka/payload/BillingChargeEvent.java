@@ -43,6 +43,8 @@ public class BillingChargeEvent {
     private String occurrenceDateTime;
 
     private String encounterId;
+    private String parentEncounterId;
+    private String episodeOfCareId;
     private String appointmentId;
     private String patientId;
     private String patientName;
