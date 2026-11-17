@@ -21,5 +21,14 @@ public final class EventType {
     public static final String PROCEDURE_ORDERED         = "PROCEDURE_ORDERED";
     public static final String PROCEDURE_ORDER_CANCELLED = "PROCEDURE_ORDER_CANCELLED";
 
+    // ── Referral & Consult events ───────────────────────────────────────────
+    public static final String REFERRAL_REQUESTED         = "REFERRAL_REQUESTED";
+    public static final String REFERRAL_ACCEPTED          = "REFERRAL_ACCEPTED";
+    public static final String REFERRAL_DECLINED          = "REFERRAL_DECLINED";
+    public static final String REFERRAL_COMPLETED         = "REFERRAL_COMPLETED";
+    public static final String REFERRAL_CANCELLED         = "REFERRAL_CANCELLED";
+    public static final String REFERRAL_ESCALATED         = "REFERRAL_ESCALATED";
+    public static final String REFERRAL_REMINDER          = "REFERRAL_REMINDER";
+
     private EventType() { /* constants-only class */ }
 }
