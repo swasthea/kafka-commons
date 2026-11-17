@@ -50,6 +50,7 @@ public class ProcedureOrderEvent {
     private String encounterId;
     private String parentEncounterId; // New field
     private String episodeOfCareId; // New field
+    private String sourceModule; // e.g. "opd" or "ipd"
     private String patientId;
     private String patientName;
     private String orderingClinicianId;
