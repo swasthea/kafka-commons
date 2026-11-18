@@ -45,6 +45,7 @@ public class BillingChargeEvent {
     private String encounterId;
     private String parentEncounterId;
     private String episodeOfCareId;
+    private String sourceModule; // e.g. "opd", "ipd", "pharmacy", "ot", "lab"
     private String appointmentId;
     private String patientId;
     private String patientName;
