@@ -12,5 +12,14 @@ public final class EventType {
     public static final String ENCOUNTER_CREATED        = "ENCOUNTER_CREATED";
     public static final String ENCOUNTER_STATUS_CHANGED = "ENCOUNTER_STATUS_CHANGED";
 
+    // ── Billing events ─────────────────────────────────────────────────────
+    public static final String BILLING_CHARGE_CREATED   = "BILLING_CHARGE_CREATED";
+    public static final String CHARGE_ITEM              = "CHARGE_ITEM";
+    public static final String OT_COMPLETED             = "OT_COMPLETED";
+
+    // ── Procedure & Clinical events ─────────────────────────────────────────
+    public static final String PROCEDURE_ORDERED         = "PROCEDURE_ORDERED";
+    public static final String PROCEDURE_ORDER_CANCELLED = "PROCEDURE_ORDER_CANCELLED";
+
     private EventType() { /* constants-only class */ }
 }
