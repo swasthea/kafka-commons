@@ -76,6 +76,11 @@ public class BillingChargeEvent {
     private String packageName;
     private Boolean isPackageCovered;
 
+    /** GST breakdown details (for pharmacy & taxable charges). */
+    private BigDecimal taxableAmount;
+    private BigDecimal gstRate;
+    private BigDecimal totalGstAmount;
+
     private Map<String, Object> metadata;
 
     public String toJson() {
